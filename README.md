@@ -126,3 +126,21 @@ Create sub folder in components based on work.
 
 1. Expenses
 2. UI
+
+# Listen to event & Working with event Handlers
+
+Naming Convension, add Hander beforeEnd :p
+add event listner as attribute.
+Ex -
+const clickhandler = () => console.log("clicked");
+<button onClick={clickhandler}>Change Name</button>
+
+# Working with "State"
+
+1. Import useState
+2. create constant. Ex - const[title, setTitle] = useState(props.title)
+3. Conduct an event and use setTitle()
+
+ExpenseItem.js For more details
+
+#
