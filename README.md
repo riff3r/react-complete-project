@@ -143,4 +143,6 @@ const clickhandler = () => console.log("clicked");
 
 ExpenseItem.js For more details
 
-#
+# How can you change what a component displays on the screen?
+
+Create some "state" value (via useState) which you can then change and output in JSX.
