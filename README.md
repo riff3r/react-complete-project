@@ -227,4 +227,27 @@ To comunicate child to parent, you should add a new prop on parent element, Nami
 4. call the handler in child to pass data to parent -
    props.onSaveExpenseData(userInput);
 
-# Lifting The State Up
+# Understanding "Keys"
+
+React doesn't know any item, Keys help React identify which items have changed, are added, or are removed.
+
+{props.items.map(item => (
+<ExpenseItem
+   key={item.id}
+   title={item.title}
+   amount={item.amount}
+   date={item.date}
+   />
+))}
+
+# Conditional Content
+
+Check Expense.js and ExpenseList.js For example.
+
+# Conditional Content - Assignment - 4
+
+1. Click event - add new epxense
+   ExpenseForm will be visible,
+   Add Cancel Button to form - add eventlistner close the form without submitting
+
+2. If new expense added then ExpenseForm will close
