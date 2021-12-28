@@ -229,7 +229,7 @@ To comunicate child to parent, you should add a new prop on parent element, Nami
 
 # Understanding "Keys"
 
-React doesn't know any item, Keys help React identify which items have changed, are added, or are removed.
+React doesn't know any item, Keys help React identify which items have changed, are added, or are removed. Ex - key={item.id}
 
 {props.items.map(item => (
 <ExpenseItem
