@@ -251,3 +251,83 @@ Check Expense.js and ExpenseList.js For example.
    Add Cancel Button to form - add eventlistner close the form without submitting
 
 2. If new expense added then ExpenseForm will close
+
+# Module - Styling React Components
+
+# Dynamic Inline Styles
+
+<!-- Set state -->
+
+const [isValid, setIsValid] = useState(true);
+
+<!-- Change State to true / false - use logic -->
+
+if (enteredValue.trim().length === 0) {
+setIsValid(false);
+return;
+}
+
+<!-- Dynamic inline Styles added -->
+
+<label style={{color: !isvalid ? 'red' : 'black'}}>Course Goal</label>
+
+# CSS Classes Dynamically
+
+Should be implemented using useState.
+
+<!-- Write CSS, class  -->
+
+.form-control.invalid label {
+color: red;
+}
+
+<!-- Add or remove class depending on State -->
+<div className={`form-control ${!isValid ? 'invalid' : ''}`}>
+
+# Introducing Styled Components
+
+Same class name used for different component causes issue. 2 approch to solve the problem given bellow:
+
+- Go to - https://styled-components.com/
+- Install: npm install --save styled-components
+- import styled from 'styled-components' where you want to use
+- Syntax - const Button = styled.button``
+
+  .button is html element, it could be any html tag.
+  Put css code in Templete leteral ``. No de
+  Ex - UI\Button.js
+
+  For pseudo-class use &. Ex - &:focus. Details - CourseInput.js
+
+Approach 2:
+
+# Styled Components & Dynamic Props
+
+Approach 1:
+
+1. Import styled from 'styled-components'
+2. Use syntax, const FormControl = styled.div`` // .div can be any HTML TAG!!
+
+Check useState status and Include / remove className. Ex - CourseInput.js, line - <FormControl className={!isValid && 'invalid'}>
+
+Approach 2:
+
+Props can be added to styled component - <FormControl invalid={!isValid}>
+
+1. Import styled from 'styled-components'
+
+2. Use syntax, const FormControl = styled.div`` // .div can be any HTML TAG!!
+
+3. Use a props, pass useState, Ex - <FormControl invalid={!isValid}>
+
+4. Use props in css, ${props => props.PropsName} -
+
+   const FormControl = styled.div`
+   margin: 0.5rem 0;
+
+   & label {
+   color: ${props => (props.invalid ? 'red' : 'black')};}
+
+# Styled Components & Media Queries
+
+Use media query
