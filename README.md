@@ -288,6 +288,9 @@ color: red;
 
 Same class name used for different component causes issue. 2 approch to solve the problem given bellow:
 
+Approch 1 - Styled component
+Approch 2 - CSS Modules
+
 - Go to - https://styled-components.com/
 - Install: npm install --save styled-components
 - import styled from 'styled-components' where you want to use
@@ -299,18 +302,16 @@ Same class name used for different component causes issue. 2 approch to solve th
 
   For pseudo-class use &. Ex - &:focus. Details - CourseInput.js
 
-Approach 2:
-
 # Styled Components & Dynamic Props
 
-Approach 1:
+Approach 1 - Using className:
 
 1. Import styled from 'styled-components'
 2. Use syntax, const FormControl = styled.div`` // .div can be any HTML TAG!!
 
 Check useState status and Include / remove className. Ex - CourseInput.js, line - <FormControl className={!isValid && 'invalid'}>
 
-Approach 2:
+Approach 2 - Using props:
 
 Props can be added to styled component - <FormControl invalid={!isValid}>
 
@@ -330,4 +331,31 @@ Props can be added to styled component - <FormControl invalid={!isValid}>
 
 # Styled Components & Media Queries
 
-Use media query
+Use media query directly in styled component.
+
+@media (min-width: 768px){
+width: auto;
+}
+
+# Using CSS Modules
+
+Resource:
+
+- https://create-react-app.dev/docs/adding-a-css-modules-stylesheet
+- Button.js
+
+1. import the css file - import styles from './Button.module.css'; ( Need to add module.css in CSS File to use css module system.
+
+2. Add className to the component - .button in className is the class we import.
+   <button type={props.type} className={styles.button} onClick={props.onClick}>
+   {props.children}
+   </button>
+
+# Dynamic Styles with CSS Modules
+
+1. Import fileName.module.css
+
+2. Use CSS Modules <div className={styles['form-control']}>. Can be applied like this ['form-control']
+
+3. Use conditional css like this -
+<div className={`${styles['form-control']} ${!isValid && styles.invalid}`} >
