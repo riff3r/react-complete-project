@@ -1,6 +1,10 @@
 # react-complete-project
 
+Course Link - udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/25598358#announcements
+
 # Step by step guide
+
+# Module 3 - React Basics & Working With Component
 
 # How to create react app?
 
@@ -14,7 +18,7 @@ Resource - https://reactjs.org/docs/components-and-props.html
 
 Create a new folder - components - for better organizing
 
-Create a new file named as you component. Ex - ExpenseItem.js
+Create a new file named as your component. Ex - ExpenseItem.js
 Follow the naming convension.
 
 This file need to export and import at base file or where you need to use this component. Ex - import ExpenseItem from "./components/ExpenseItem"
@@ -252,7 +256,7 @@ Check Expense.js and ExpenseList.js For example.
 
 2. If new expense added then ExpenseForm will close
 
-# Module - Styling React Components
+# Module 6 - Styling React Components
 
 # Dynamic Inline Styles
 
@@ -359,3 +363,20 @@ Resource:
 
 3. Use conditional css like this -
 <div className={`${styles['form-control']} ${!isValid && styles.invalid}`} >
+
+# Module 7: Debugging React Apps
+
+# Understanding React Error Messages
+
+Working with Breakpoint need to practice again
+
+# Module 8: Complete Practice Project
+
+1. Enter user info, added to successful new container
+
+- Shows userName (## Years old)
+- Reset the input
+
+2. If empty user, alert - enter valid name and age, alert closed by click okay button, or click out side / backdrop or press esc key
+
+3. negative age (-1), alert - please enter a valid age (>0)
