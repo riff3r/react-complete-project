@@ -396,8 +396,7 @@ Working with Breakpoint need to practice again
 
 4.  Create props and function for every keystroke,
 
-
-      - <input onChange={usernameChangeHandler} />
-      - Send input through setState, setEnteredUser(prevAge => { return { ...prevAge,age: event.target.value };});
+    - <input onChange={usernameChangeHandler} />
+    - Send input through setState, setEnteredUser(prevAge => { return { ...prevAge,age: event.target.value };});
 
 5.  Get submited value from current state. Ex - enteredUser
