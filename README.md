@@ -2,11 +2,11 @@
 
 Course Link - udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/25598358#announcements
 
-# Step by step guide
+## Step by step guide
 
-# Module 3 - React Basics & Working With Component
+## Module 3 - React Basics & Working With Component
 
-# How to create react app?
+## How to create react app?
 
 Resource - https://reactjs.org/docs/create-a-new-react-app.html
 
@@ -348,21 +348,22 @@ Resource:
 - https://create-react-app.dev/docs/adding-a-css-modules-stylesheet
 - Button.js
 
-1. import the css file - import styles from './Button.module.css'; ( Need to add module.css in CSS File to use css module system.
+1.  import the css file - import styles from './Button.module.css'; ( Need to add module.css in CSS File to use css module system.
 
-2. Add className to the component - .button in className is the class we import.
-   <button type={props.type} className={styles.button} onClick={props.onClick}>
-   {props.children}
-   </button>
+2.  Add className to the component - .button in className is the class we import.
+    <button type={props.type} className={styles.button} onClick={props.onClick}>
+    {props.children}
+    </button>
 
 # Dynamic Styles with CSS Modules
 
-1. Import fileName.module.css
+1.  Import fileName.module.css
 
-2. Use CSS Modules <div className={styles['form-control']}>. Can be applied like this ['form-control']
+2.  Use CSS Modules <div className={styles['form-control']}>. Can be applied like this ['form-control']
 
-3. Use conditional css like this -
-<div className={`${styles['form-control']} ${!isValid && styles.invalid}`} >
+3.  Use conditional css like this -
+
+   <div className={`${styles['form-control']} ${!isValid && styles.invalid}`}>
 
 # Module 7: Debugging React Apps
 
@@ -372,11 +373,31 @@ Working with Breakpoint need to practice again
 
 # Module 8: Complete Practice Project
 
-1. Enter user info, added to successful new container
+1.  Enter user info, added to successful new container
 
 - Shows userName (## Years old)
 - Reset the input
 
-2. If empty user, alert - enter valid name and age, alert closed by click okay button, or click out side / backdrop or press esc key
+2.  If empty user, alert - enter valid name and age, alert closed by click okay button, or click out side / backdrop or press esc key
 
-3. negative age (-1), alert - please enter a valid age (>0)
+3.  negative age (-1), alert - please enter a valid age (< 1)
+
+### Get input from a form in React
+
+1.  Create a form and add onSubmit={} // addUserHandler, add handler at end, naming convension
+
+2.  Create a function for form submision handler and preventdefault().
+    const addUserHandler = event => {
+    event.preventdefault();
+    };
+
+3.  Managing the user input State
+    const [enteredUser, setEnteredUser] = useState({username: '', age: ''})
+
+4.  Create props and function for every keystroke,
+
+
+      - <input onChange={usernameChangeHandler} />
+      - Send input through setState, setEnteredUser(prevAge => { return { ...prevAge,age: event.target.value };});
+
+5.  Get submited value from current state. Ex - enteredUser
