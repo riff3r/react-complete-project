@@ -9,7 +9,7 @@ function App() {
     console.log(users);
 
     setNewUser(prevState => {
-      return [{ ...prevState, username: users.username, age: users.age }];
+      return [...prevState, users];
     });
   };
 
