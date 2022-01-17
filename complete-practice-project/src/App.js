@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import AddUser from './components/Users/AddUser';
-import UserLists from './components/Users/UserLists';
+import UserList from './components/Users/UserList';
 
 function App() {
   const [newUser, setNewUser] = useState([]);
@@ -19,7 +19,7 @@ function App() {
     <div>
       <AddUser onAddUser={userData} />
 
-      <UserLists users={newUser} />
+      <UserList users={newUser} />
     </div>
   );
 }
