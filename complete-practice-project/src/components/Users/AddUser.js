@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, Fragment } from 'react';
 import Card from '../UI/Card';
 import classes from './AddUser.module.css';
 import Button from '../UI/Button';
@@ -49,7 +49,7 @@ const AddUser = props => {
   };
 
   return (
-    <div>
+    <Fragment>
       {error && (
         <ErrorModal
           onConfirm={errorHandler}
@@ -79,7 +79,7 @@ const AddUser = props => {
           <Button type="submit">Add User</Button>
         </form>
       </Card>
-    </div>
+    </Fragment>
   );
 };
 

@@ -400,3 +400,17 @@ Working with Breakpoint need to practice again
     - Send input through setState, setEnteredUser(prevAge => { return { ...prevAge,age: event.target.value };});
 
 5.  Get submited value from current state. Ex - enteredUser
+
+### Creating a Wrapper Component to overcome JSX Limitations
+
+In a jsx sytex we can't place multiple elements without a parent container / component. Lets solve this issue -
+
+1.  Custom Wrapper
+2.  Empty Tag - <> </>
+3.  React.Fragments
+
+Custom Wrapper - create a custom component which contains {props.children}
+React.Fragments
+
+- Use <React.Fragment></React.Fragment>, import React mandatory
+- Use <Fragment></Fragment>, import directly as named import, import React, {Fragment} from 'react'
