@@ -421,4 +421,36 @@ In a jsx sytex we can't place multiple elements without a parent container / com
 
 ## ReactPortal
 
-1. create
+1. Create a child element, string or fragment.
+   Ex -
+   const Backdrop = props => {
+   return <div className={classes.backdrop} onClick={props.onConfirm} />;
+   };
+
+2. Create a parent element. Ex - <div id="backdrop-root"></div>
+
+3. Import ReactDOM and ReactPortal
+
+4. Render child - ReactDOM.createPortal(child, container)
+
+   Ex - {ReactDOM.createPortal(
+   <Backdrop onConfirm={props.onConfirm} />,
+   document.getElementById('backdrop-root')
+   )}
+
+## React ref
+
+1. Import {useRef} as named import
+
+2. set useRef(). Ex - nameInputRef = useRef();
+
+3. Put the ref attribute in the html and pass the nameInputRef.
+   EX - <input
+            onChange={usernameChangeHandler}
+            value={enteredUser.username}
+            type="text"
+            id="username"
+            ref={nameInputRef}
+          />
+
+4. use ref where needed

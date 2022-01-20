@@ -1,15 +1,20 @@
-import { useState, Fragment } from 'react';
+import { useState, Fragment, useRef } from 'react';
 import Card from '../UI/Card';
 import classes from './AddUser.module.css';
 import Button from '../UI/Button';
 import ErrorModal from '../UI/ErrorModal';
 
 const AddUser = props => {
+  const nameInputRef = useRef();
+  const ageInputRef = useRef();
+
   const [enteredUser, setEnteredUser] = useState({ username: '', age: '' });
   const [error, setError] = useState();
 
   const addUserHandler = event => {
     event.preventDefault();
+    console.log(nameInputRef.current.value);
+    console.log(ageInputRef.current.value);
 
     if (!enteredUser.username.trim().length || !enteredUser.age.trim().length) {
       setError({
@@ -66,6 +71,7 @@ const AddUser = props => {
             value={enteredUser.username}
             type="text"
             id="username"
+            ref={nameInputRef}
           />
 
           <label htmlFor="age">Age (Years)</label>
@@ -74,6 +80,7 @@ const AddUser = props => {
             value={enteredUser.age}
             type="number"
             id="age"
+            ref={ageInputRef}
           />
 
           <Button type="submit">Add User</Button>
