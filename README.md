@@ -408,9 +408,17 @@ In a jsx sytex we can't place multiple elements without a parent container / com
 1.  Custom Wrapper
 2.  Empty Tag - <> </>
 3.  React.Fragments
+4.  React Portal
 
-Custom Wrapper - create a custom component which contains {props.children}
-React.Fragments
+## Custom Wrapper
+
+- create a custom component which contains {props.children}
+
+## React.Fragments
 
 - Use <React.Fragment></React.Fragment>, import React mandatory
 - Use <Fragment></Fragment>, import directly as named import, import React, {Fragment} from 'react'
+
+## ReactPortal
+
+1. create
