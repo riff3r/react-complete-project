@@ -454,3 +454,12 @@ In a jsx sytex we can't place multiple elements without a parent container / com
           />
 
 4. use ref where needed
+
+## useEffect
+
+To apply useEffect hook we'll use localStorage this time.
+
+- Import useEffect
+
+1.  Use localStorage.setItem()
+2.  Use useEffect() Hook without dependency. Just for testing purpose.
