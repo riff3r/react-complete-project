@@ -455,11 +455,23 @@ In a jsx sytex we can't place multiple elements without a parent container / com
 
 4. use ref where needed
 
+## Side Effect
+
+Whenever you have an action that should be executed in response to some other action that is a side effect.
+
 ## useEffect
 
-To apply useEffect hook we'll use localStorage this time.
+useEffect able to help side effect.
 
-- Import useEffect
+By using this Hook, you tell React that your component needs to do something after render. React will remember the function you passed (we’ll refer to it as our “effect”), and call it later after performing the DOM updates.
 
-1.  Use localStorage.setItem()
-2.  Use useEffect() Hook without dependency. Just for testing purpose.
+https://reactjs.org/docs/hooks-effect.html
+
+## Using the useEffect Cleanup Function
+
+1.  Create a setTimeout() function in useEffer() hook. Ex - sideeffect-reducer > src > components > login > login.js
+
+const identifier = setTimeout(() => {})
+
+2.  - Create return with function in useEffect() (not in setTimeout).
+    - clearTimeout(identifier)
