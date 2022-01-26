@@ -475,3 +475,7 @@ const identifier = setTimeout(() => {})
 
 2.  - Create return with function in useEffect() (not in setTimeout).
     - clearTimeout(identifier)
+
+## useReducer Hook
+
+const [state, dispatchFn] = useReducer(reducerFn, initialState, initFn);
