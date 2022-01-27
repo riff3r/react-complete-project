@@ -479,3 +479,7 @@ const identifier = setTimeout(() => {})
 ## useReducer Hook
 
 const [state, dispatchFn] = useReducer(reducerFn, initialState, initFn);
+
+1. Create a variable, const [emailState, dispatchEmail] = useReducer();
+
+2. Next step is using parameter of useReducer.
