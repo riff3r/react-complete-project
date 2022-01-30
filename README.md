@@ -417,7 +417,7 @@ In a jsx sytex we can't place multiple elements without a parent container / com
 ## React.Fragments
 
 - Use <React.Fragment></React.Fragment>, import React mandatory
-- Use <Fragment></Fragment>, import directly as named import, import React, {Fragment} from 'react'
+- Use <Fragment></Fragment>, import directly as named import. Ex - import React, {Fragment} from 'react'
 
 ## ReactPortal
 
@@ -438,7 +438,7 @@ In a jsx sytex we can't place multiple elements without a parent container / com
    document.getElementById('backdrop-root')
    )}
 
-## React ref
+## React ref hook
 
 1. Import {useRef} as named import
 
@@ -478,8 +478,23 @@ const identifier = setTimeout(() => {})
 
 ## useReducer Hook
 
+Use reducer is a mechanism to change a state.
+
 const [state, dispatchFn] = useReducer(reducerFn, initialState, initFn);
 
-1. Create a variable, const [emailState, dispatchEmail] = useReducer();
+1. Create a variable, const [emailState, dispatchEmail] = useReducer(emailReducer, {value: '', isValid: false}, );
 
 2. Next step is using parameter of useReducer.
+
+   First parameter - reducerFn need 2 parameter, state & action
+
+   const emailReducer = (state, action) = > {
+   retrun {value: '', isValid: false};
+   }
+
+   Second Parameter - {value: '', isValid: false};
+   Declar initial state in parameter.
+
+   Third Parameter -
+
+3. Use state of reducer
