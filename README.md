@@ -482,19 +482,16 @@ Use reducer is a mechanism to change a state.
 
 const [state, dispatchFn] = useReducer(reducerFn, initialState, initFn);
 
-1. Create a variable, const [emailState, dispatchEmail] = useReducer(emailReducer, {value: '', isValid: false}, );
+1.  Call initial State. Ex - const initialState = 5;
+2.  Call ReducerFn. Ex - const reducer = (state, action) => {switch(action)}
+3.  const [count, dispatch] = useReducer(reducer, initialState);
+4.  Declare dispatch to get / change state.
+5.  declare count to display result
 
-2. Next step is using parameter of useReducer.
+Check: concept-practice > reducer
 
-   First parameter - reducerFn need 2 parameter, state & action
+## React Context
 
-   const emailReducer = (state, action) = > {
-   retrun {value: '', isValid: false};
-   }
+https://reactjs.org/docs/context.html#gatsby-focus-wrapper
 
-   Second Parameter - {value: '', isValid: false};
-   Declar initial state in parameter.
-
-   Third Parameter -
-
-3. Use state of reducer
+Context provides a way to pass data through the component tree without having to pass props down manually at every level.
