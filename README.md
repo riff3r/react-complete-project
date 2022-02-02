@@ -490,6 +490,10 @@ const [state, dispatchFn] = useReducer(reducerFn, initialState, initFn);
 
 Check: concept-practice > reducer
 
+## Higher-Order Components
+
+Concretely, a higher-order component is a function that takes a component and returns a new component.
+
 ## React Context
 
 https://reactjs.org/docs/context.html#gatsby-focus-wrapper
