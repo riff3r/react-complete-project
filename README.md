@@ -499,3 +499,28 @@ Concretely, a higher-order component is a function that takes a component and re
 https://reactjs.org/docs/context.html#gatsby-focus-wrapper
 
 Context provides a way to pass data through the component tree without having to pass props down manually at every level.
+
+sideeffect-reducer-context-api
+
+1.  Create a new file and folder named anything related. Ex - store > auth-context.js
+
+2.  Import React and create React.createContext() in file (auth-context.js) and pass value. most of the time it could be object.
+
+3.  createContext should be in a variable and export it. Ex - export default AuthContext;
+
+4.  Now wrap component.
+
+- import the function - (AuthContext)
+- Access a property. Ex - AuthContext.Provider
+
+5. Now lisining part. We can access the value in two ways
+
+- Off context consumer
+- React Hook
+
+We'll use off context consumer this time. we'll try hook later.
+
+6. Use Off context consumer by wraping the component where provided data need to consume
+
+- Use consumer - <AuthContext.Consumer> - Navigation.js
+- Consumer takes a child which is a function - {(ctx) => {}}
