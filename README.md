@@ -513,14 +513,29 @@ sideeffect-reducer-context-api
 - import the function - (AuthContext)
 - Access a property. Ex - AuthContext.Provider
 
-5. Now lisining part. We can access the value in two ways
+5. Consume Data
+   Now lisining part. We can access the value in two ways
 
-- Off context consumer
-- React Hook
+   - Off context consumer
+   - React Hook
 
-We'll use off context consumer this time. we'll try hook later.
+   1. Off context consumer
 
-6. Use Off context consumer by wraping the component where provided data need to consume
+   Use Off context consumer by wraping the component where provided data need to consume
 
-- Use consumer - <AuthContext.Consumer> - Navigation.js
-- Consumer takes a child which is a function - {(ctx) => {}}
+   - Use consumer - <AuthContext.Consumer> - Navigation.js
+   - Consumer takes a child which is a function - {(ctx) => {}}
+
+   2. React Hook
+
+   - import useContext. Ex - import React, { useContext } from 'react';
+
+   - call it where needed. Ex - const ctx = useContext(AuthContext);
+
+## Building & Using a Custom Context Provider Component
+
+Need to figure out later
+
+## Diving into "Forward Refs"
+
+Need to figure out later
