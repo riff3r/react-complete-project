@@ -357,9 +357,11 @@ Resource:
 
 # Dynamic Styles with CSS Modules
 
-1.  Import fileName.module.css
+1.  Import FileName.module.css // import styles from './FileName.module.css';
 
-2.  Use CSS Modules <div className={styles['form-control']}>. Can be applied like this ['form-control']
+2.  a) Use . when class name dont have any dash(-). Ex - styles.form
+
+b) Use CSS Modules <div className={styles['form-control']}>. Can be applied like this ['form-control'] when css class have dash
 
 3.  Use conditional css like this -
 
