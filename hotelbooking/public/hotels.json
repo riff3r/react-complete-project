@@ -1,0 +1,32 @@
+[
+  {
+    "id": 101,
+    "name": "Long Beach HotelOpens in new window",
+    "location": "Cox's Bazar",
+    "rent": 11411,
+    "image": "https://cf.bstatic.com/xdata/images/hotel/square200/283183777.webp?k=67bf9d26d4f5bd7029b1868afc21a57f31b1e119f6f2bbea51aca4dee98ad810&o=&s=1"
+  },
+
+  {
+    "id": 102,
+    "name": "Laguna Beach Hotel & Resort",
+    "location": "Cox's Bazar",
+    "rent": 5951,
+    "image": "https://cf.bstatic.com/xdata/images/hotel/square200/226576224.webp?k=c18cda03124c8e8cfb3f916118e89d1199eb61440fd81b22bdbf0541435f2260&o=&s=1"
+  },
+
+  {
+    "id": 103,
+    "name": "Grace Cox Smart HotelOpens in new window",
+    "location": "Cox's Bazar",
+    "rent": 12937,
+    "image": "https://cf.bstatic.com/xdata/images/hotel/square200/267126029.webp?k=4b6eaaaa738819c7cfb9ff86ec598fb2f750e4668c30d53b1828e87ebec7ddcc&o=&s=1"
+  },
+  {
+    "id": 104,
+    "name": "Hotel Sea World Cox's Bazar",
+    "location": "Cox's Bazar",
+    "rent": 13000,
+    "image": "https://cf.bstatic.com/xdata/images/hotel/square200/126712471.webp?k=c00730fb6feeaccf83bde882921968a0b9b975f4b44bed2285458db165d3deda&o=&s=1"
+  }
+]
